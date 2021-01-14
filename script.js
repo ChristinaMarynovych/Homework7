@@ -34,9 +34,10 @@ function getMyTaxes(salary) {
   // function 4
   function getMySalary(country) {
     setInterval(() => {
-    const minSalary = 1500;
-    const maxSalary = 2000;
-      const salary = Math.floor(Math.random() * (maxSalary - minSalary + 1)) + minSalary;
+    // const minSalary = 1500;
+    // const maxSalary = 2000;
+    //   const salary = Math.floor(Math.random() * (maxSalary - minSalary + 1)) + minSalary;
+      const salary = Math.floor(Math.random() * 500) + 1500;
       const taxes = +getMyTaxes.call(country, salary);
       const profit = +(salary - taxes).toFixed(2);
       return console.log({salary, taxes, profit});
